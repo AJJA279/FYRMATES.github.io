@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FR Mates y Accesorios | Tienda Oficial</title>
+  
+  <!-- Tipografías de la marca -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <svg viewBox="0 0 100 100" class="logo-svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#2C2A29" stroke-width="2.5"/>
+          <path id="text-path-top" d="M 12,50 A 38,38 0 0,1 88,50" fill="none"/>
+          <text font-family="Cinzel, serif" font-size="7.5" font-weight="700" letter-spacing="3" fill="#2C2A29">
+            <textPath href="#text-path-top" startOffset="50%" text-anchor="middle">MATES</textPath>
+          </text>
+          <text x="36" y="52" font-family="Cinzel, serif" font-size="30" font-weight="700" fill="#2C2A29">F</text>
+          <text x="50" y="66" font-family="Cinzel, serif" font-size="32" font-weight="700" fill="#2C2A29">R</text>
+          <path id="text-path-bottom" d="M 88,50 A 38,38 0 0,1 12,50" fill="none"/>
+          <text font-family="Cinzel, serif" font-size="6.5" font-weight="700" letter-spacing="2" fill="#2C2A29">
+            <textPath href="#text-path-bottom" startOffset="50%" text-anchor="middle">Y ACCESORIOS</textPath>
+          </text>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">FR</span>
+          <span class="brand-subtitle">MATES Y ACCESORIOS</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Buscar producto...">
+        </div>
+        <button class="cart-btn" id="openCartBtn" aria-label="Ver carrito">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="badge-hero"><i class="fa-solid fa-gem"></i> PIEZAS ARTESANALES DE COLECCIÓN</span>
+        <h1 class="hero-title">
+          EL RITUAL DEL MATE,
+          <span class="highlight-text">ELEVADO A LA EXCELENCIA.</span>
+        </h1>
+        <p class="hero-desc">
+          Descubrí nuestra cuidada selección de mates torpedo, imperiales y accesorios criollos trabajados minuciosamente a mano en alpaca, bronce, madera noble y cuero vacuno seleccionado.
+        </p>
+        <div class="hero-buttons">
+          <a href="#catalogo" class="btn btn-primary">Ver Catálogo Completo</a>
+          <a href="#nosotros" class="btn btn-outline">Nuestra Historia</a>
+        </div>
+      </div>
+      
+      <div class="hero-illustration">
+        <div class="illustration-card">
+          <img src="/imagenes/INICIO1.jpg" alt="Mate Imperial Artesanal" class="hero-mate-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Catálogo -->
+  <section class="catalog-section" id="catalogo">
+    <div class="catalog-header">
+      <div class="section-title">
+        <h2>CATÁLOGO SELECCIONADO</h2>
+        <p>Explorá nuestras piezas exclusivas trabajadas a mano por artesanos nacionales.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-category="todos">Todos</button>
+        <button class="filter-btn" data-category="mates">Mates</button>
+        <button class="filter-btn" data-category="bombillas">Bombillas</button>
+        <button class="filter-btn" data-category="termos">Termos</button>
+        <button class="filter-btn" data-category="accesorios">Accesorios</button>
+      </div>
+    </div>
+
+    <!-- Grilla de productos declarados directamente en HTML -->
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Producto 1 -->
+      <div class="product-card" data-id="1" data-category="mates" data-price="38500" data-name="Mate torpedo con botitas de alpaca y bronce" data-description="Mate torpedo confeccionado en calabaza de selección, forrado en cuero de primera calidad con apoyo reforzado de botitas en alpaca trabajada y detalles en bronce.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/torpedo.jpeg" alt="Mate torpedo con botitas de alpaca y bronce">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE TORPEDO CON BOTITAS DE ALPACA Y BRONCE</h3>
+          <p class="product-desc">Exclusivo mate formato torpedo confeccionado en cuero vacuno teñido con botitas de alpaca...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$38.500</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="product-card" data-id="2" data-category="mates" data-price="32000" data-name="Mate imperial de algarrobo barnizado Modelo 1" data-description="Mate imperial tallado en madera maciza de algarrobo con acabado barnizado brillante que resalta las vetas naturales y virola de aleación fina pulida.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/barniz1.jpeg" alt="Mate imperial de algarrobo barnizado Modelo 1">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE IMPERIAL DE ALGARROBO BARNIZADO MODELO 1</h3>
+          <p class="product-desc">Mate torneado en madera noble de algarrobo seleccionado con lustrado...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$32.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="product-card" data-id="3" data-category="mates" data-price="34500" data-name="Mate imperial de algarrobo barnizado Modelo 2" data-description="Variante exclusiva del imperial en algarrobo barnizado con guarda ornamentada cincelada a mano con motivos clásicos.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/barniz2.jpeg" alt="Mate imperial de algarrobo barnizado Modelo 2">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE IMPERIAL DE ALGARROBO BARNIZADO MODELO 2</h3>
+          <p class="product-desc">Elegante mate de madera de algarrobo barnizada, destacado por su vistosa virola...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$34.500</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="product-card" data-id="4" data-category="mates" data-price="29000" data-name="Mate sol de mayo" data-description="Edición patria tallada en madera noble con el Sol de Mayo grabado en relieve de bronce en el frente y la frase 'Coronados de Gloria' alrededor.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/sol.jpeg" alt="Mate sol de mayo">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE SOL DE MAYO</h3>
+          <p class="product-desc">Edición patria 'Coronados de Gloria'. Cuerpo en algarrobo natural con aplique...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$29.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="product-card" data-id="5" data-category="mates" data-price="42000" data-name="Mate imperial de calabaza, guarda de alpaca" data-description="El clásico de lujo. Calabaza ecuatoriana seleccionada por su grosor, forrada en cuero vacuno y coronada con virola y guarda cincelada en pura alpaca.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/imperial calabaza.jpeg" alt="Mate imperial de calabaza, guarda de alpaca">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE IMPERIAL DE CALABAZA, GUARDA DE ALPACA</h3>
+          <p class="product-desc">Calabaza ecuatoriana seleccionada con virola cincelada en alpaca pura...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$42.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="product-card" data-id="6" data-category="mates" data-price="36000" data-name="Mate imperial, forrados en cuero, guarda de acero" data-description="Elegante mate imperial con cuerpo forrado en cuero negro grabado y virola ancha en acero inoxidable de alto brillo.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/forrado de cuero.jpeg" alt="Mate imperial, forrados en cuero, guarda de acero">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE IMPERIAL FORRADO EN CUERO Y ACERO</h3>
+          <p class="product-desc">Diseño sobrio en cuero vacuno negro con guarda de acero pulido espejado...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$36.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="product-card" data-id="7" data-category="mates" data-price="44000" data-name="Mate imperial de calabaza borravino, guarda de alpaca" data-description="Exclusivo tono borravino en cuero curtido artesanalmente. Calabaza de boca ancha con virola y guarda en alpaca cincelada.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/borravino.jpeg" alt="Mate imperial borravino">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE IMPERIAL CALABAZA BORRAVINO</h3>
+          <p class="product-desc">Tono borravino exclusivo en cuero curtido con guarda fina en alpaca...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$44.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="product-card" data-id="8" data-category="mates" data-price="29800" data-name="Mate imperial de algarrobo sin barniz" data-description="Para los amantes de lo natural. Algarrobo macizo pulido al aceite de oliva sin tratamientos químicos, con virola de acero grabada.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/algarrobo.jpeg" alt="Mate imperial de algarrobo sin barniz">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE IMPERIAL DE ALGARROBO SIN BARNIZ</h3>
+          <p class="product-desc">Algarrobo macizo pulido al aceite, conserva el aroma de la madera pura...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$29.800</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="product-card" data-id="9" data-category="mates" data-price="35000" data-name="Mate animal print, guarda de acero" data-description="Diseño moderno con forrado en cuero grabado textura cheetah/animal print y virola de acero trabajada.">
+        <div class="product-thumb">
+          <span class="product-badge">MATE ARTESANAL</span>
+          <img src="/imagenes/animal print.jpeg" alt="Mate animal print">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE ANIMAL PRINT GUARDA DE ACERO</h3>
+          <p class="product-desc">Estilo vanguardista con textura cheetah y virola cincelada en acero...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$35.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 10 -->
+      <div class="product-card" data-id="10" data-category="accesorios" data-price="31000" data-name="Canasta matera reforzada con divisiones" data-description="Matera rígida de cuero negro con costuras blancas a la vista, correa reforzada con remaches y divisiones internas.">
+        <div class="product-thumb">
+          <span class="product-badge">ACCESORIO</span>
+          <img src="/imagenes/canasta reforzada.jpeg" alt="Canasta matera reforzada">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">CANASTA MATERA REFORZADA</h3>
+          <p class="product-desc">Matera rígida de cuero vacuno negro con divisiones para termo y yerbera...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$31.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 11 -->
+      <div class="product-card" data-id="11" data-category="accesorios" data-price="26500" data-name="Canasta reforzada MDF, forrada en ecocuero" data-description="Estructura interna ultrarresistente de MDF, forrada en ecocuero lavable de alta densidad.">
+        <div class="product-thumb">
+          <span class="product-badge">ACCESORIO</span>
+          <img src="/imagenes/mdf ecocuero.jpeg" alt="Canasta MDF">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">CANASTA REFORZADA MDF ECOCUERO</h3>
+          <p class="product-desc">Estructura solida de MDF forrada en ecocuero lavable de gran resistencia...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$26.500</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 12 -->
+      <div class="product-card" data-id="12" data-category="accesorios" data-price="28900" data-name="Bolso matero ecocuero" data-description="Bolso urbano con cierre hermético superior e interior térmico impermeable.">
+        <div class="product-thumb">
+          <span class="product-badge">ACCESORIO</span>
+          <img src="/imagenes/ecocuero.jpeg" alt="Bolso matero">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">BOLSO MATERO ECOCUERO</h3>
+          <p class="product-desc">Diseño urbano térmico impermeable para trasladar tu kit completo...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$28.900</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 13 -->
+      <div class="product-card" data-id="13" data-category="accesorios" data-price="24000" data-name="Morrales materos" data-description="Morral ajustado y liviano con correa regulable para transportar tu mate y termo a todos lados.">
+        <div class="product-thumb">
+          <span class="product-badge">ACCESORIO</span>
+          <img src="/imagenes/morrales.jpeg" alt="Morrales materos">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MORRALES MATEROS</h3>
+          <p class="product-desc">Práctico morral liviano con correa ajustable reforzada...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$24.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 14 -->
+      <div class="product-card" data-id="14" data-category="termos" data-price="78000" data-name="Termos Stanley media manija" data-description="Termo de acero inoxidable con doble pared de aislamiento al vacío. Mantiene el agua caliente por más de 24 horas.">
+        <div class="product-thumb">
+          <span class="product-badge">TERMOS</span>
+          <img src="/imagenes/termos stanley.jpeg" alt="Termos Stanley">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">TERMOS STANLEY MEDIA MANIJA</h3>
+          <p class="product-desc">Acero inoxidable con aislamiento de doble pared al vacío 1 Litro...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$78.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 15 -->
+      <div class="product-card" data-id="15" data-category="termos" data-price="32000" data-name="Termos bala 1L" data-description="El clásico termo bala en acero inoxidable cepillado con tapón cebador de precisión.">
+        <div class="product-thumb">
+          <span class="product-badge">TERMOS</span>
+          <img src="/imagenes/termo bala.jpeg" alt="Termo bala">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">TERMOS BALA 1L</h3>
+          <p class="product-desc">Acero cepillado reforzado con tapón cebador mateador...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$32.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 16 -->
+      <div class="product-card" data-id="16" data-category="bombillas" data-price="16500" data-name="Bombillones de alpaca pico de loro" data-description="Bombillón de alpaca pura con filtro pala ideal para yerba uruguaya o de molienda fina.">
+        <div class="product-thumb">
+          <span class="product-badge">BOMBILLAS</span>
+          <img src="/imagenes/bombillones.jpeg" alt="Bombillon alpaca">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">BOMBILLONES DE ALPACA PICO DE LORO</h3>
+          <p class="product-desc">Pura alpaca con filtro pala desarmable de fácil limpieza...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$16.500</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 17 -->
+      <div class="product-card" data-id="17" data-category="bombillas" data-price="8500" data-name="Bombillas chatas lisas" data-description="Bombilla chata tradicional en acero inoxidable, fácil de limpiar y de excelente flujo.">
+        <div class="product-thumb">
+          <span class="product-badge">BOMBILLAS</span>
+          <img src="/imagenes/bombillas lisas.jpeg" alt="Bombilla chata">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">BOMBILLAS CHATAS LISAS</h3>
+          <p class="product-desc">Acero inoxidable quirúrgico de flujo óptimo...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$8.500</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 18 -->
+      <div class="product-card" data-id="18" data-category="bombillas" data-price="11000" data-name="Bombillas chatas con detalle en bronce" data-description="Bombilla de acero con anillo y boquilla reinforced en bronce pulido.">
+        <div class="product-thumb">
+          <span class="product-badge">BOMBILLAS</span>
+          <img src="/imagenes/bombillas con detalle.jpeg" alt="Bombilla bronce">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">BOMBILLAS CHATAS CON DETALLE EN BRONCE</h3>
+          <p class="product-desc">Cuerpo de acero con apliques y boquilla en bronce de primera...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$11.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 19 -->
+      <div class="product-card" data-id="19" data-category="accesorios" data-price="95000" data-name="Combo Matero completo" data-description="Incluye Mate Imperial + Termo 1L + Matera de Cuero + Bombilla de Alpaca.">
+        <div class="product-thumb">
+          <span class="product-badge">COMBO</span>
+          <img src="/imagenes/combo matero.jpeg" alt="Combo completo">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">COMBO MATERO COMPLETO</h3>
+          <p class="product-desc">Kit completo: Mate imperial + Termo 1L + Matera de cuero + Bombilla...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$95.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 20 -->
+      <div class="product-card" data-id="20" data-category="mates" data-price="39000" data-name="Mate con grabado personalizado" data-description="Personalizamos tu mate con el escudo, iniciales, nombre o frase que elijas grabado a láser.">
+        <div class="product-thumb">
+          <span class="product-badge">PERSONALIZADO</span>
+          <img src="/imagenes/personalizado.jpeg" alt="Mate grabado">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">MATE CON GRABADO PERSONALIZADO</h3>
+          <p class="product-desc">Grabado láser de iniciales, escudos o frases a elección...</p>
+          <div class="product-footer">
+            <div class="price-box">
+              <span class="price-label">Precio contado</span>
+              <span class="product-price">$39.000</span>
+            </div>
+            <button class="btn-add-cart"><i class="fa-solid fa-plus"></i> Agregar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botón Cargar Más -->
+    <div class="load-more-container">
+      <button id="loadMoreBtn" class="btn btn-outline">Ver más productos</button>
+    </div>
+  </section>
+
+  <!-- Tarjetas de Beneficios (Debajo del catálogo) -->
+  <section class="features-section">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-hammer"></i></div>
+        <div>
+          <h3>TRABAJO 100% ARTESANAL</h3>
+          <p>Cada mate cuenta con virola cincelada a mano y cincelado único en bronce, alpaca y aceros de máxima pureza.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <h3>GARANTÍA DE CALIDAD</h3>
+          <p>Seleccionamos únicamente calabazas brasileñas de pared gruesa y maderas de algarrobo estacionadas.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
+        <div>
+          <h3>ENVÍOS CUIDADOS</h3>
+          <p>Empacamos cada producto en caja reinforced con protección anti-impactos para asegurar su perfecta llegada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección "Nuestra Pasión / Nosotros" (Debajo del catálogo) -->
+  <section class="about-section" id="nosotros">
+    <div class="about-container">
+      <div class="about-content">
+        <span class="section-tag">NUESTRA PASIÓN</span>
+        <h2>TRADICIÓN Y ELEGANCIA EN CADA CEBADA</h2>
+        <p>En <strong>FR Mates y Accesorios</strong> nacimos con la misión de revalorizar la tradición matera argentina. Creemos que compartir un mate no es solo una costumbre, sino un momento de encuentro y pausa diaria.</p>
+        <p>Trabajamos mano a mano con los mejores orfebres y artesanos del país, cuidando la terminación de las virolas, el lustre de los algarrobos y la solidez de nuestras canastas materas de cuero vacuno.</p>
+      </div>
+
+      <div class="about-quote-card">
+        <div class="quote-logo-badge">FR</div>
+        <p class="quote-text">"El mate nos une, la calidad artesanal marca la diferencia."</p>
+        <span class="quote-author">— TALLER FR MATES</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes (Debajo del catálogo) -->
+  <section class="faq-section" id="faq">
+    <div class="section-title text-center">
+      <h2>PREGUNTAS FRECUENTES</h2>
+      <p>Todo lo que necesitás saber antes de adquirir tu mate artesanal.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span>¿Cómo debo curar un mate de calabaza o madera?</span>
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-content">
+          <p>Llená el mate con yerba usada húmeda y agua tibia. Dejalo reposar 24 horas y raspá suavemente el interior con una cuchara. Repetir 2 veces en calabaza.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span>¿Qué cuidados requiere la virola de alpaca o bronce?</span>
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-content">
+          <p>Secar siempre la virola inmediatamente después de usar para evitar manchas de humedad y repasar periódicamente con un paño seco.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span>¿Hacen envíos a todo el país y cómo se abona?</span>
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-content">
+          <p>Enviamos a toda la Argentina por Correo y Andreani. Podés pagar con tarjeta en cuotas o transferencia bancaria con descuento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ventana Lateral Carrito (Drawer a la Derecha) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> TU CARRITO</h3>
+      <button class="close-cart" id="closeCartBtn" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    
+    <div class="cart-body" id="cartBody"></div>
+    
+    <div class="cart-footer">
+      <div class="cart-summary-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn btn-primary checkout-btn" id="openCheckoutModalBtn">
+        <i class="fa-solid fa-file-invoice-dollar"></i> Continuar Compra
+      </button>
+    </div>
+  </aside>
+
+  <!-- Modal de Checkout & Datos de Envío -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-truck-ramp-box"></i> Datos de Envío y Pago</h3>
+        <button class="modal-close" id="closeCheckoutModalBtn">&times;</button>
+      </div>
+      
+      <form id="checkoutForm" class="checkout-form">
+        <div class="form-group">
+          <label for="clientName">Nombre Completo *</label>
+          <input type="text" id="clientName" required placeholder="Ej: Juan Pérez">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientPhone">Teléfono / WhatsApp *</label>
+            <input type="tel" id="clientPhone" required placeholder="Ej: 3815551234">
+          </div>
+          <div class="form-group">
+            <label for="clientDni">DNI / CUIT *</label>
+            <input type="text" id="clientDni" required placeholder="Ej: 38123456">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientAddress">Dirección de Entrega *</label>
+          <input type="text" id="clientAddress" required placeholder="Calle, número, piso/depto">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientCity">Localidad / Provincia *</label>
+            <input type="text" id="clientCity" required placeholder="Ej: San Miguel de Tucumán">
+          </div>
+          <div class="form-group">
+            <label for="clientZip">Código Postal</label>
+            <input type="text" id="clientZip" placeholder="Ej: 4000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">Método de Pago *</label>
+          <select id="paymentMethod" required>
+            <option value="Transferencia Bancaria (10% OFF)">Transferencia Bancaria (10% OFF)</option>
+            <option value="Mercado Pago">Mercado Pago / Tarjetas</option>
+            <option value="Efectivo al Retirar">Efectivo al Retirar (Local)</option>
+          </select>
+        </div>
+
+        <div class="checkout-summary-box">
+          <span>Monto Total a Abonar:</span>
+          <strong id="modalTotalAmount">$0</strong>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-order-btn">
+          <i class="fa-brands fa-whatsapp"></i> Confirmar Pedido por WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Confirmación Exitoso -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card text-center">
+      <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h2>¡PEDIDO REGISTRADO!</h2>
+      <p style="margin: 12px 0; color: var(--text-muted);">
+        Tu orden <strong>#<span id="orderNumber">0000</span></strong> fue procesada correctamente. Se abrirá WhatsApp para coordinar el pago y despacho con nuestro equipo.
+      </p>
+      <button class="btn btn-primary" id="closeSuccessBtn">Aceptar y Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Footer Oscuro -->
+  <footer class="footer" id="contacto">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="footer-badge">FR</div>
+          <h3>FR MATES</h3>
+        </div>
+        <p>Pasión, arte y tradición criolla. Elaboración y selección de mates imperiales y accesorios únicos.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>NAVEGACIÓN</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo de Productos</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACTO DIRECTO</h4>
+        <ul class="contact-info">
+          <li><i class="fa-brands fa-whatsapp"></i> Atención Pedidos: +54 9 381 555-1234</li>
+          <li><i class="fa-solid fa-location-dot"></i> Tucumán, Argentina</li>
+          <li><i class="fa-solid fa-envelope"></i> contacto@frmates.com.ar</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>REDES SOCIALES</h4>
+        <p class="social-text">Seguinos en Instagram para enterarte de los nuevos ingresos y sorteos.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>&copy; 2026 FR - Mates y Accesorios Artesanales. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
